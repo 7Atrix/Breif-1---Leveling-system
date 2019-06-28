@@ -8,10 +8,13 @@ public class LevelingSystem : MonoBehaviour
     public float experience;
     private float experiencerequired;
    
-    //Empty Functions
-    public float hp;
+    //Extra Functions
+    public float hp; //HP will scale up with the level
+    //public int damage
+    //public int armour
+    //public int speed
+                     
 
-   
     void Start()
     {
         level = 1;
@@ -35,7 +38,7 @@ public class LevelingSystem : MonoBehaviour
         level = 1;
         experience = 0;
 
-        switch (level) //HP scaling
+        switch (level) //HP scaling with each level
         {
             case 2:
                 hp = 200;
@@ -56,6 +59,6 @@ public class LevelingSystem : MonoBehaviour
     {
         if (experience >= experiencerequired)
             LevelUp();
-        
+        //If experience equals the required amount then Level Up
     }
 }
